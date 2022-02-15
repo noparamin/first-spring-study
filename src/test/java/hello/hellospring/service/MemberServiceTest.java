@@ -30,6 +30,7 @@ class MemberServiceTest {
         //given
         Member member = new Member();
         member.setName("spring");
+        member.setPassword("1234");
 
         //when
         Long saveId = memberService.join(member);
@@ -43,9 +44,11 @@ class MemberServiceTest {
         //given
         Member member1 = new Member();
         member1.setName("spring");
+        member1.setPassword("1234");
 
         Member member2 = new Member();
         member2.setName("spring");
+        member2.setPassword("12345");
 
         //when
         memberService.join(member1);
